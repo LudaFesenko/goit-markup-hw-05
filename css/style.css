@@ -107,8 +107,21 @@ img {
 .site-nav .active.link {
   color: var(--active-color);
 }
+.link.active::after {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color-logo);
+  border-radius: 2px;
+}
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
+}
+.site-nav.list .item {
+  position: relative;
 }
 .site-nav .link {
   display: block;
